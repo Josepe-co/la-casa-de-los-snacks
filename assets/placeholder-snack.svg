@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-label="Imagen de prueba">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2a0a38"/>
+      <stop offset="100%" stop-color="#180d1f"/>
+    </linearGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#d35bc2" opacity="0.25"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <rect width="800" height="500" fill="url(#dots)"/>
+  <rect x="1" y="1" width="798" height="498" rx="0" fill="none" stroke="#d35bc2" stroke-width="2" stroke-dasharray="12 8" opacity="0.4"/>
+  <circle cx="400" cy="195" r="54" fill="none" stroke="#d35bc2" stroke-width="2.5" opacity="0.5"/>
+  <text x="400" y="203" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#d35bc2" opacity="0.6">🍢</text>
+  <text x="400" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#f3b8ec" opacity="0.85">Imagen de prueba</text>
+  <text x="400" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#b09ab8" opacity="0.7">Se reemplaza con foto real del producto</text>
+</svg>
