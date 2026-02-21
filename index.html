@@ -173,6 +173,166 @@
       </div>
     </footer>
 
+    <!-- ===== MASCOTA KORI ===== -->
+    <div class="kori-mascot" id="koriMascot">
+      <div class="kori-bubble" id="koriBubble">
+        <p id="koriBubbleText">¡Hola! ¿Qué se te antoja hoy? 😋</p>
+      </div>
+      <img src="kori-normal.png" alt="Kori, mascota de La Casa de los Snack's" id="koriImg" class="kori-img" />
+    </div>
+
+    <!-- ===== MODAL DE PEDIDO ===== -->
+    <div class="order-overlay" id="orderOverlay" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
+      <div class="order-modal" id="orderModal">
+
+        <!-- Cabecera -->
+        <div class="order-modal__header">
+          <div class="order-modal__header-info">
+            <span class="order-modal__tag">Agrega al pedido</span>
+            <h2 class="order-modal__title" id="orderModalTitle">Producto</h2>
+          </div>
+          <img src="kori-normal.png" alt="Kori" class="order-modal__kori" id="koriModalImg" />
+          <button class="order-modal__close" id="orderModalClose" aria-label="Cerrar modal">✕</button>
+        </div>
+
+        <!-- Cuerpo -->
+        <div class="order-modal__body">
+
+          <!-- Variante -->
+          <div class="order-section">
+            <p class="order-section__label">🎯 Elige tu variante</p>
+            <div class="variant-grid" id="variantGrid"></div>
+          </div>
+
+          <!-- Cantidad -->
+          <div class="order-section">
+            <p class="order-section__label">🔢 Cantidad</p>
+            <div class="qty-selector">
+              <button class="qty-btn" id="qtyMinus" aria-label="Menos">−</button>
+              <span class="qty-value" id="qtyValue">1</span>
+              <button class="qty-btn" id="qtyPlus" aria-label="Más">+</button>
+            </div>
+          </div>
+
+        </div><!-- /body -->
+
+        <!-- Pie: subtotal + agregar -->
+        <div class="order-modal__footer">
+          <div class="order-total">
+            <span class="order-total__label">Subtotal</span>
+            <span class="order-total__amount" id="orderTotal">$0</span>
+          </div>
+          <button class="btn order-add-btn" id="orderAddBtn">
+            Agregar al pedido 🛒
+          </button>
+        </div>
+
+      </div><!-- /order-modal -->
+    </div><!-- /order-overlay -->
+
+    <!-- ===== MODAL DEL CARRITO ===== -->
+    <div class="cart-overlay" id="cartOverlay" role="dialog" aria-modal="true" aria-labelledby="cartModalTitle">
+      <div class="cart-modal" id="cartModal">
+
+        <!-- Cabecera -->
+        <div class="order-modal__header">
+          <div class="order-modal__header-info">
+            <span class="order-modal__tag">Tu pedido completo</span>
+            <h2 class="order-modal__title" id="cartModalTitle">Carrito</h2>
+          </div>
+          <img src="kori-normal.png" alt="Kori" class="order-modal__kori" id="koriCartImg" />
+          <button class="order-modal__close" id="cartModalClose" aria-label="Cerrar carrito">✕</button>
+        </div>
+
+        <!-- Cuerpo -->
+        <div class="cart-modal__body">
+
+          <!-- Estado vacío -->
+          <div class="cart-empty" id="cartEmpty">
+            <span class="cart-empty__icon">🛒</span>
+            <p>Aún no has agregado nada</p>
+            <small>Elige algo del menú y agrégalo aquí</small>
+          </div>
+
+          <!-- Lista de items -->
+          <div class="cart-items" id="cartItemsList"></div>
+
+          <!-- Separador -->
+          <hr class="cart-divider" id="cartDivider" />
+
+          <!-- Tipo de entrega -->
+          <div class="order-section" id="cartDeliverySection">
+            <p class="order-section__label">📦 Tipo de entrega</p>
+            <div class="delivery-options">
+              <label class="delivery-opt">
+                <input type="radio" name="cartDelivery" value="delivery" id="cartRadioDelivery" checked />
+                <span class="delivery-opt__card">
+                  <span class="delivery-opt__icon">🛵</span>
+                  <span class="delivery-opt__info">
+                    <strong>Envío a domicilio</strong>
+                    <small>+$15</small>
+                  </span>
+                </span>
+              </label>
+              <label class="delivery-opt">
+                <input type="radio" name="cartDelivery" value="pickup" id="cartRadioPickup" />
+                <span class="delivery-opt__card">
+                  <span class="delivery-opt__icon">🏠</span>
+                  <span class="delivery-opt__info">
+                    <strong>Recoger en local</strong>
+                    <small>Sin costo extra</small>
+                  </span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Dirección -->
+          <div class="order-section" id="cartAddressSection">
+            <p class="order-section__label">📍 Tu dirección</p>
+            <input
+              type="text"
+              id="cartAddress"
+              class="order-input"
+              placeholder="Ej: Barrio el Sabinito, calle Hidalgo #12…"
+            />
+            <span class="order-input-error" id="cartAddressError">¡Falta tu dirección para hacer el envío! 📍</span>
+          </div>
+
+          <!-- Notas -->
+          <div class="order-section">
+            <p class="order-section__label">📝 Notas extras <small class="label-optional">(opcional)</small></p>
+            <textarea
+              id="cartNotes"
+              class="order-input"
+              rows="2"
+              placeholder="Sin picante, doble aderezo, sin cebolla…"
+            ></textarea>
+          </div>
+
+        </div><!-- /body -->
+
+        <!-- Pie -->
+        <div class="order-modal__footer">
+          <div class="order-total">
+            <span class="order-total__label">Total estimado</span>
+            <span class="order-total__amount" id="cartTotal">$0</span>
+          </div>
+          <button class="btn order-send-btn" id="cartSubmitBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.449A11.928 11.928 0 0 0 12.003.002C5.465.002.002 5.468.002 12.01c0 2.118.554 4.184 1.607 6.003L0 24l6.138-1.609A11.946 11.946 0 0 0 12.003 24c6.54 0 11.998-5.464 11.998-12.006a11.96 11.96 0 0 0-3.481-8.545Zm-8.517 18.464a9.924 9.924 0 0 1-5.055-1.383l-.363-.215-3.764.987 1.003-3.659-.235-.375A9.894 9.894 0 0 1 2.09 12.01c0-5.47 4.45-9.922 9.916-9.922A9.86 9.86 0 0 1 19.033 5.9a9.885 9.885 0 0 1 2.878 7c-.003 5.47-4.453 9.913-9.91 9.913Zm5.441-7.427c-.298-.149-1.764-.87-2.037-.969-.274-.099-.474-.148-.673.149-.2.297-.772.969-.946 1.168-.174.2-.348.224-.646.075-.298-.15-1.259-.464-2.398-1.48-.887-.79-1.485-1.764-1.659-2.061-.174-.298-.018-.459.13-.607.134-.134.298-.348.447-.522.15-.175.2-.298.298-.497.1-.2.05-.373-.025-.522-.074-.149-.673-1.62-.922-2.219-.243-.582-.49-.503-.673-.513-.174-.009-.373-.011-.572-.011-.2 0-.522.075-.796.373-.274.297-1.044 1.02-1.044 2.487s1.069 2.884 1.218 3.083c.149.2 2.104 3.21 5.098 4.5.713.307 1.269.49 1.703.628.716.228 1.368.196 1.883.119.574-.085 1.764-.721 2.013-1.417.248-.697.248-1.294.174-1.418-.074-.124-.274-.199-.572-.348Z"/></svg>
+            Enviar por WhatsApp
+          </button>
+        </div>
+
+      </div><!-- /cart-modal -->
+    </div><!-- /cart-overlay -->
+
+    <!-- ===== FAB CARRITO ===== -->
+    <button class="fab-cart" id="fabCart" aria-label="Ver carrito">
+      🛒
+      <span class="fab-cart__badge" id="cartBadge">0</span>
+    </button>
+
     <!-- ===== BOTÓN FLOTANTE WHATSAPP ===== -->
     <a href="https://wa.me/529616556465" target="_blank" rel="noopener" class="fab-wa" aria-label="Contactar por WhatsApp">
       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M20.52 3.449A11.928 11.928 0 0 0 12.003.002C5.465.002.002 5.468.002 12.01c0 2.118.554 4.184 1.607 6.003L0 24l6.138-1.609A11.946 11.946 0 0 0 12.003 24c6.54 0 11.998-5.464 11.998-12.006a11.96 11.96 0 0 0-3.481-8.545Zm-8.517 18.464a9.924 9.924 0 0 1-5.055-1.383l-.363-.215-3.764.987 1.003-3.659-.235-.375A9.894 9.894 0 0 1 2.09 12.01c0-5.47 4.45-9.922 9.916-9.922A9.86 9.86 0 0 1 19.033 5.9a9.885 9.885 0 0 1 2.878 7c-.003 5.47-4.453 9.913-9.91 9.913Zm5.441-7.427c-.298-.149-1.764-.87-2.037-.969-.274-.099-.474-.148-.673.149-.2.297-.772.969-.946 1.168-.174.2-.348.224-.646.075-.298-.15-1.259-.464-2.398-1.48-.887-.79-1.485-1.764-1.659-2.061-.174-.298-.018-.459.13-.607.134-.134.298-.348.447-.522.15-.175.2-.298.298-.497.1-.2.05-.373-.025-.522-.074-.149-.673-1.62-.922-2.219-.243-.582-.49-.503-.673-.513-.174-.009-.373-.011-.572-.011-.2 0-.522.075-.796.373-.274.297-1.044 1.02-1.044 2.487s1.069 2.884 1.218 3.083c.149.2 2.104 3.21 5.098 4.5.713.307 1.269.49 1.703.628.716.228 1.368.196 1.883.119.574-.085 1.764-.721 2.013-1.417.248-.697.248-1.294.174-1.418-.074-.124-.274-.199-.572-.348Z"/></svg>
