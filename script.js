@@ -269,7 +269,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
    ============================================= */
 
 const WA_NUMBER    = "529616556465";
-const DELIVERY_FEE = 15;
+const DELIVERY_FEE = 30;
 
 // ── Estado global ──────────────────────────────────────────────
 let currentProduct       = null;
