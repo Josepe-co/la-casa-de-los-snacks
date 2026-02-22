@@ -10,7 +10,7 @@ const products = [
     badge: "Popular",
     description:
       "Salchicha cubierta de masa crujiente y tu topping favorito. El clásico callejero elevado a otro nivel.",
-    image: "assets/placeholder-snack.svg",
+    image: "imgs/banderilla_cheddar_cheetos.jpeg",
     variants: [
       ["Clásica", "$50"],
       ["Papa", "$60"],
@@ -20,6 +20,7 @@ const products = [
       ["Cheddar Chetos", "$60"],
       ["Takis Azules", "$60"],
       ["Ruffles", "$60"],
+      ["Doritos Nachos", "$60"],
     ],
   },
   {
@@ -28,7 +29,7 @@ const products = [
     badge: null,
     description:
       "Combinación de proteínas con empanizado doradito e intenso. Para quienes quieren algo distinto sin pensarlo dos veces.",
-    image: "assets/placeholder-snack.svg",
+    image: "imgs/banderilla_maruchan_takisazules.jpeg",
     variants: [
       ["Clásica", "$65"],
       ["Papa", "$70"],
@@ -38,6 +39,7 @@ const products = [
       ["Cheddar Chetos", "$70"],
       ["Takis Azules", "$70"],
       ["Ruffles", "$70"],
+      ["Doritos Nachos", "$70"],
     ],
   },
   {
@@ -46,7 +48,7 @@ const products = [
     badge: "Favorita",
     description:
       "La versión premium: base cremosa de queso, empanizado crunchy por fuera y suave por dentro. Un nivel diferente.",
-    image: "assets/placeholder-snack.svg",
+    image: "imgs/banderilla_flaminghot.jpeg",
     variants: [
       ["Clásica", "$70"],
       ["Papa", "$80"],
@@ -56,6 +58,7 @@ const products = [
       ["Cheddar Chetos", "$80"],
       ["Takis Azules", "$80"],
       ["Ruffles", "$80"],
+      ["Doritos Nachos", "$80"],
     ],
   },
   {
@@ -64,7 +67,7 @@ const products = [
     badge: "6 piezas",
     description:
       "Bocaditos esféricos de queso derretido con cobertura crujiente. Perfectos para dippear con tus salsas favoritas.",
-    image: "assets/placeholder-snack.svg",
+    image: "imgs/bolitas_queso_clasicas.jpeg",
     variants: [
       ["Clásica", "$90"],
       ["Papa", "$100"],
@@ -72,6 +75,7 @@ const products = [
       ["Jalapeño", "$100"],
       ["Flaminhot", "$100"],
       ["Cheddar Chetos", "$100"],
+      ["Doritos Nachos", "$100"],
       ["Combinadas", "$130"],
     ],
   },
@@ -81,7 +85,7 @@ const products = [
     badge: null,
     description:
       "Papas doradas, crujientes y bien sazonadas. Súbeles el nivel con toppings y aderezos de tu elección.",
-    image: "assets/placeholder-snack.svg",
+    image: "imgs/orden_papas.jpeg",
     variants: [
       ["Porción Chica", "$60"],
       ["Porción Grande", "$100"],
@@ -93,10 +97,47 @@ const products = [
     badge: null,
     description:
       "La combinación irresistible de papas a la francesa con salchicha en trozos. Salsas incluidas para cerrar perfecto.",
-    image: "assets/placeholder-snack.svg",
+    image: "imgs/orden_salchipapa.jpeg",
     variants: [
       ["Porción Chica", "$70"],
       ["Porción Grande", "$120"],
+    ],
+  },
+  {
+    id: "mega-banderilla",
+    name: "Mega Banderilla",
+    badge: "Nueva",
+    description:
+      "Versión XXL con extra queso derretido. Más grande, más cremosa, más todo. Para cuando el antojo es de verdad.",
+    image: "imgs/banderilla_flaminghot_jumbo.jpeg",
+    variants: [
+      ["Clásica", "$120"],
+      ["Papa", "$130"],
+      ["Ramen", "$130"],
+      ["Jalapeño", "$130"],
+      ["Flaminhot", "$130"],
+      ["Cheddar Chetos", "$130"],
+      ["Takis Azules", "$130"],
+      ["Ruffles", "$130"],
+      ["Doritos Nachos", "$130"],
+    ],
+  },
+  {
+    id: "bebidas",
+    name: "Bebidas",
+    badge: null,
+    description:
+      "Refrésquete con algo para acompañar tu antojo. Aguas frescas del día y refrescos bien fríos.",
+    image: "imgs/aguas.jpeg",
+    variants: [
+      ["Horchata", "$20"],
+      ["Jamaica", "$20"],
+      ["Limón con Chía", "$20"],
+      ["7up", "$20"],
+      ["Pepsi", "$20"],
+      ["Mirinda", "$20"],
+      ["Manzanita", "$20"],
+      ["Coca Cola", "$25"],
     ],
   },
 ];
